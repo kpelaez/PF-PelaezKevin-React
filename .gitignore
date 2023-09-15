@@ -21,3 +21,8 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+#MisArticulos
+
+/src/components/Clase3.js
+/src\components\Micomponente.js
