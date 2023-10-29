@@ -1,0 +1,26 @@
+
+.CardItem{
+    background-color: rgb(219, 224, 220);
+    height: 500px;
+    width: 450px;
+    border-radius: 30px;
+    margin-bottom: 20px;
+    margin-top: 5px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.ItemImg{
+    height: 300px;
+    width: 250px;
+    border-radius: 30px;
+}
+
+
+.Info{
+    font-size: large;
+    font-weight: bold;
+}
+

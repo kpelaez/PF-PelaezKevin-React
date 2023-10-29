@@ -1,0 +1,6 @@
+.ListGroup{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: rgb(151, 219, 196);
+}

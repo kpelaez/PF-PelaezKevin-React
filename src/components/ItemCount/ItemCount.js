@@ -1,4 +1,5 @@
 import {useState} from 'react';
+import './itemcount.css'
 
 export default function ItemCount  ({stock, inicial, onAdd}) {
     const [cantidad, setCantidad] = useState(inicial)

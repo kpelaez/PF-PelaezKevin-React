@@ -4,15 +4,17 @@ import { useContext } from 'react';
 import { CartContext } from '../../context/CartContext';
 import { Link } from 'react-router-dom';
 
-export default function CartWidget() {
+const CartWidget = () => {
 
   const {totalCant}= useContext(CartContext)
 
   return (
     
-    <Link to='/cart' className='CartWidget' style={{display: totalCant > 0? 'block': 'none'}}>
+    <Link to='/cart' className='CartWidget'>
       <img className='CartImg' src={logoCarrito} alt='logo carrito'/>
       {totalCant}
     </Link>
   )
 }
+
+export default CartWidget

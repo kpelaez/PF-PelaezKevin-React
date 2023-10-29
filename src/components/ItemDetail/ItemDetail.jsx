@@ -4,12 +4,13 @@ import { useState } from "react"
 
 import {CartContext} from '../../context/CartContext'
 import { useContext } from "react"
+import './itemdetail.css'
 
 const ItemDetail = ({id, name, img, category, description, price, stock}) =>{
 
     const [cantAdded,setCantAdded] = useState(0)
 
-    const {addItem } = useContext(CartContext)
+    const {addItem} = useContext(CartContext)
 
     const handleOnAdd = (cant) =>{
         setCantAdded(cant)
@@ -22,23 +23,23 @@ const ItemDetail = ({id, name, img, category, description, price, stock}) =>{
     }
 
     return(
-        <article className="CardItem">
+        <article className="CardItem-detail">
             <header className="Header">
                 <h2 className="ItemHeader">
                     {name}
                 </h2>
             </header>
             <picture>
-                <img src={img} alt={name} className="ItemImg" />
+                <img src={img} alt={name} className="ItemImg" id="ItemImgDetail"/>
             </picture>
-            <section>
-                <p className="Info">
+            <section className="sectionDetail">
+                <p className="InfoDetail titulo">
                     Categoria: {category}
                 </p>
-                <p className="Info">
+                <p className="InfoDetail cuerpo">
                     Descripcion: {description}
                 </p>
-                <p className="Info">
+                <p className="InfoDetail precio">
                     Precio: ${price}
                 </p>
             </section>

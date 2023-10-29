@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+h3{
+    background-color: rgb(28, 175, 126);
+    font-size: xxx-large;
+}
+
+.menu{
+    padding-top: 15px;
+    padding-bottom: 5px;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(28, 175, 126);
+}
+
+.Option{
+    font-size: x-large;
+    list-style: none;
+    text-decoration: none;
+    background-color: rgb(153, 151, 151);
+    border-radius: 10px;
+    padding: 5px;
+    color: black;
+    
+}
