@@ -1,14 +1,19 @@
 import React from 'react'
 import {useState, useEffect} from 'react'
 import ItemList from '../ItemList/ItemList'
-import {getProductos} from '../../Asincronicos'
+import {getProductos, getProductosPorCategoria} from '../../Asincronicos'
+import { useParams } from 'react-router-dom'
 
 
 export default function ItemListContainer({greeting}) {
   const [productos, setProductos] = useState([])
+
+  const {categoryId} = useParams()
   
   useEffect(()=>{
-    getProductos()
+
+    const funcionAsync = categoryId ? getProductosPorCategoria : getProductos
+    funcionAsync(categoryId)
       .then(response =>{
           setProductos(response)
       })
@@ -16,7 +21,7 @@ export default function ItemListContainer({greeting}) {
         console.error(error)
       })
 
-  }, [])
+  }, [categoryId])
 
   return (
     <div>

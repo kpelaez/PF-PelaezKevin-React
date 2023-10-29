@@ -79,3 +79,5 @@ export const getProductById = (productId) =>{
     })
 
 }
+
+export const getProductosPorCategoria = () =>{}
